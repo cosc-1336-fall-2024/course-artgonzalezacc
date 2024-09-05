@@ -26,3 +26,10 @@ def use_local_variables_str():
     num = '10' #create an int(whole number) variable 
     print(num)
     print(num + '10') #string concatenation
+
+def use_reuse_local_variable():
+    str1 = 'Python' #assign a value
+    print(str1)
+
+    str1 = 'C++' #reassign a value
+    print(str1)
