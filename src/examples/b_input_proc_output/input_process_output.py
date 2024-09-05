@@ -23,7 +23,7 @@ def use_local_variables_int():
     print(num + 10) #math operation
 
 def use_local_variables_str():
-    num = '10' #create an int(whole number) variable 
+    num = '10' #create an string variable 
     print(num)
     print(num + '10') #string concatenation
 
@@ -56,3 +56,13 @@ def output_multiple_values():
     num1 = 10.99
 
     print(num, str, num1)
+
+def determine_data_type_of_variables():
+    num = 10
+    print(type(num))
+
+    num = 10.99
+    print(type(num))
+
+    num = '10'
+    print(type(num))
