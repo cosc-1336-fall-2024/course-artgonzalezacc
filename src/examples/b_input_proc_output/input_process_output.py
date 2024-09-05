@@ -33,3 +33,13 @@ def use_reuse_local_variable():
 
     str1 = 'C++' #reassign a value
     print(str1)
+
+def use_reuse_local_variable_data_type():
+    num = 10 #whole number --- int
+    print(num + 15) #math operation
+
+    num = 10.99 #(float)
+    print(num + .49)
+
+    num = 'python' #string data type
+    print(num)
