@@ -49,3 +49,10 @@ def multiple_variable_assignment():
     print(a)
     print(b)
     print(c)
+
+def output_multiple_values():
+    num = 10
+    str = 'lang'
+    num1 = 10.99
+
+    print(num, str, num1)
