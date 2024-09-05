@@ -43,3 +43,9 @@ def use_reuse_local_variable_data_type():
 
     num = 'python' #string data type
     print(num)
+
+def multiple_variable_assignment():
+    a, b, c = 10, 20, 30
+    print(a)
+    print(b)
+    print(c)
