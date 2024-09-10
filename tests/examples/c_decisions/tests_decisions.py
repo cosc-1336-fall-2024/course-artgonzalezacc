@@ -34,3 +34,17 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(True, True or True and False) #AND takes precedence over OR
         self.assertEqual(True, not False and False or True)#NOT, AND, OR use () controls precedence
 
+    def test_if_a_number_is_in_a_range(self): 
+        self.assertEqual(True, 1 >= 1 and 1 <= 10) #number in range 1 to 10 (example 1 is in range and 10 also)
+        self.assertEqual(True, 10 >= 1 and 10 <= 10) 
+        self.assertEqual(True, 5 >= 1 and 5 <= 10)
+        self.assertEqual(False, 0 >= 1 and 0 <= 10)
+        self.assertEqual(False, 11 >= 1 and 11 <= 10) 
+
+    def test_is_number_in_range(self):
+        self.assertEqual(True, is_number_in_range(1, 10, 1))
+        self.assertEqual(True, is_number_in_range(1, 10, 10))
+        self.assertEqual(True, is_number_in_range(1, 10, 5))
+        self.assertEqual(False, is_number_in_range(1, 10, 0))
+        self.assertEqual(False, is_number_in_range(1, 10, 11))
+        self.assertEqual(False, is_number_in_range(1, 10, 100))
