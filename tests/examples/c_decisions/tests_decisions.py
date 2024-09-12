@@ -72,3 +72,12 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(False, is_number_even(3))
         self.assertEqual(True, is_number_even(100))
         self.assertEqual(False, is_number_even(99))
+
+    def test_compare_letters(self):
+        self.assertEqual(False, 'A' == 'a')
+        self.assertEqual(True, 'a' == 'a')
+        self.assertEqual(True, 'A' == 'A')
+
+    def test_compare_words(self):
+        self.assertEqual(True, 'Python' == 'Python')
+        self.assertEqual(False, 'Python' == 'PythoN')
