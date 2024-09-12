@@ -1,15 +1,11 @@
 import decisions
 
 def main():
-    num = int(input("Enter a number: "))
+    year = int(input("Enter a year: "))
 
-    is_even = decisions.is_number_even(num)
+    generation = decisions.get_generation(year)
 
-    if(is_even):
-        print(num, 'Even')
-        print('------')
-    else:
-        print(num, 'Odd')
+    print(year, generation)
 
 main()#run our program
 

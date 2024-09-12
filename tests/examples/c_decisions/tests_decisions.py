@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.c_decisions.decisions import is_consonant, is_number_even, is_vowel, test_config, is_number_in_range
+from src.examples.c_decisions.decisions import get_generation, is_consonant, is_number_even, is_vowel, test_config, is_number_in_range
 
 class Test_Config(unittest.TestCase):
 
@@ -81,3 +81,14 @@ class Test_Config(unittest.TestCase):
     def test_compare_words(self):
         self.assertEqual(True, 'Python' == 'Python')
         self.assertEqual(False, 'Python' == 'PythoN')
+
+    def test_get_generation(self):
+        self.assertEqual('Invalid Year', get_generation(1900))
+        self.assertEqual('The Greatest Generation', get_generation(1915))
+        self.assertEqual('The Silent Generation', get_generation(1930))
+        self.assertEqual('Baby Boomer Generation', get_generation(1947))
+        self.assertEqual('Generation X', get_generation(1970))
+        self.assertEqual('Generation Y', get_generation(1990))
+        self.assertEqual('Generation Z', get_generation(2010))
+        self.assertEqual('Generation Alpha', get_generation(2020))
+        self.assertEqual('Invalid Year', get_generation(2030))
