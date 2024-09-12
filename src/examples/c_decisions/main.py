@@ -8,6 +8,8 @@ def main():
     if(is_even):
         print(num, 'Even')
         print('------')
+    else:
+        print(num, 'Odd')
 
 main()#run our program
 
