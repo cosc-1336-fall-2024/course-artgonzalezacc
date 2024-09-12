@@ -9,3 +9,6 @@ def is_vowel(letter):#a e i o u
 
 def is_consonant(letter):
     return not (letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u')
+
+def is_number_even(num):
+    return num % 2 == 0

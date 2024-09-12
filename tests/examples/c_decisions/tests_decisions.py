@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.c_decisions.decisions import is_consonant, is_vowel, test_config, is_number_in_range
+from src.examples.c_decisions.decisions import is_consonant, is_number_even, is_vowel, test_config, is_number_in_range
 
 class Test_Config(unittest.TestCase):
 
@@ -66,3 +66,9 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(True, is_consonant('m'))
         self.assertEqual(True, is_consonant('w'))
         self.assertEqual(True, is_consonant('z'))
+
+    def test_is_number_even(self):
+        self.assertEqual(True, is_number_even(2))
+        self.assertEqual(False, is_number_even(3))
+        self.assertEqual(True, is_number_even(100))
+        self.assertEqual(False, is_number_even(99))
