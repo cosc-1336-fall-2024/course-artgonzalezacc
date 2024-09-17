@@ -30,3 +30,8 @@ def sum_of_squares_indx(num):
 
     return total
 
+def for_range_display_numbers(num):
+
+    for val in range(0, num):
+        print(val+1)
+
