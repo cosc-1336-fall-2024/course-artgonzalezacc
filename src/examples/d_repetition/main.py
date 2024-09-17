@@ -1,7 +1,7 @@
 import repetition
 
 def main():
-    repetition.print_hello()
+    repetition.sum_of_squares(3)
 
 main() #runs the program
 
