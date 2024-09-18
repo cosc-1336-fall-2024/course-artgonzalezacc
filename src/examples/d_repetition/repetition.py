@@ -35,3 +35,20 @@ def for_range_display_numbers(num):
     for val in range(0, num):
         print(val+1)
 
+def for_sum_of_squares(num):
+    total = 0
+
+    for val in range(0, num):
+        total = total +  (val+1) * (val+1)   
+
+    return total
+
+def for_sum_of_squares_2(num):
+    total = 0
+
+    for val in range(1, num + 1):
+        total = total + val * val
+
+    return total
+
+
