@@ -67,5 +67,21 @@ def nested_while_loop():
 
         outer_indx += 1
 
+def while_multiplication_table(row, col):
+
+    r = 0
+
+    while(r < row):
+        c = 0
+
+        while(c < col):
+            product = (r + 1) * (c + 1)
+            print(str(product).rjust(3, " "), end = " ")
+            c += 1
+
+        r += 1
+
+        print(" ")
+
 
 
