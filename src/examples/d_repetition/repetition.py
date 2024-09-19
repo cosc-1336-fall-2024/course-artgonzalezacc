@@ -83,5 +83,14 @@ def while_multiplication_table(row, col):
 
         print(" ")
 
+def for_nested_loop():
+    num = 3
+
+    for i in range(0, num):
+        print("Outer loop", i)
+
+        for j in range(0, num):
+            print("\t inner loop", j)
+
 
 
