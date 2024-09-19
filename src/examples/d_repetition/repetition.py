@@ -111,5 +111,31 @@ def user_controlled_while_loop():
         choice = input("Enter Y to continue: ")
         #other statements
 
+def display_menu():
+    print('1-Option 1')
+    print('2-Option 2')
+    print('3-Exit')
+
+def run_menu():
+    option = '0'
+
+    while(option != '3'):
+    
+        display_menu()
+        option = input("Enter a menu option: ")
+        handle_menu_option(option)
+
+def handle_menu_option(option):
+
+    if(option == '1'):
+        print("You selected option 1")
+    elif(option == '2'):
+        print('You selected option 2')
+    elif(option == '3'):
+        print("Program Exiting...")
+    else:
+        print("Invalid option")
+
+
 
 

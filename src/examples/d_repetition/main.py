@@ -1,7 +1,7 @@
 import repetition
 
 def main():
-    repetition.user_controlled_while_loop()
+    repetition.run_menu()
 
 main() #runs the program
 
