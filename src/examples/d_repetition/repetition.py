@@ -92,5 +92,15 @@ def for_nested_loop():
         for j in range(0, num):
             print("\t inner loop", j)
 
+def for_multiplication_table(row, col):
+
+    for r in range(0, row):
+
+        for c in range(0, col):
+            product = (r + 1) * (c + 1)
+            print(str(product).rjust(3, " "), end = " ")
+
+        print(" ")
+
 
 
