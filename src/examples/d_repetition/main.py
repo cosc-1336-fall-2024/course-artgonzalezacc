@@ -1,7 +1,7 @@
 import repetition
 
 def main():
-    repetition.for_range_display_numbers(3)
+    repetition.nested_while_loop()
 
 main() #runs the program
 

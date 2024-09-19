@@ -51,4 +51,21 @@ def for_sum_of_squares_2(num):
 
     return total
 
+def nested_while_loop():
+
+    outer_loops = 3
+    outer_indx = 0
+
+    while(outer_indx < outer_loops): #iterate three times
+        inner_loops = 3
+        inner_indx = 0
+        print("Outer Loop", outer_indx, outer_indx < outer_loops)
+
+        while(inner_indx < inner_loops):
+            print("\tInner Loop", inner_indx, inner_indx < inner_loops)
+            inner_indx += 1 #same as inner_indx = inner_indx + 1
+
+        outer_indx += 1
+
+
 
