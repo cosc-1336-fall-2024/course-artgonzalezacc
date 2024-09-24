@@ -2,7 +2,10 @@
 import void_functions
 
 def main():
-
-    void_functions.display_number()
+    num1 = 5
+    print("main0", num1)
+    num1 = 10
+    void_functions.show_numbers(1)
+    print("main1", num1)
 
 main()
