@@ -122,8 +122,15 @@ def run_menu():
     while(option != '3'):
     
         display_menu()
-        option = input("Enter a menu option: ")
+
+        while(not (option == '1' or option == '2' or option == '3')):
+            option = input("Enter a menu option 1-3: ")
+
+            if(option == '3'):
+                exit()
+        
         handle_menu_option(option)
+        option = '0'
 
 def handle_menu_option(option):
 
