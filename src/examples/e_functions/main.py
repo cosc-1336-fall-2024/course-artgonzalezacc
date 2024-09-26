@@ -2,8 +2,9 @@
 import value_return_functions
 
 def main():
-    result = value_return_functions.echo_value(5)
-    print(result)
     
+    for i in range(0, 10):
+        result = value_return_functions.get_random_value(1, 100)
+        print(result)
 
 main()
