@@ -1,9 +1,9 @@
 #main program
-import void_functions
+import value_return_functions
 
 def main():
-    void_functions.hello_world()
-    void_functions.display_number()
+    result = value_return_functions.echo_value(5)
+    print(result)
     
 
 main()
