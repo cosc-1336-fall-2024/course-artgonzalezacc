@@ -7,4 +7,5 @@ def main():
 
     print(num)
 
-main()
+if __name__ == '__main__':
+    main()
