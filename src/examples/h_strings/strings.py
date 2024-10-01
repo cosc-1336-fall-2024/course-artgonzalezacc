@@ -11,4 +11,13 @@ def string_access_a_character():
     print(lang[2])
 
     #lang[0] = 'c' cannot modify individual characters in a string 
+
+def loop_a_string_w_while():
+    lang = "Python"
+    indx = 0
+
+    while(indx < len(lang)):
+        print(lang[indx])
+        indx += 1 # index = index + 1
+    
     

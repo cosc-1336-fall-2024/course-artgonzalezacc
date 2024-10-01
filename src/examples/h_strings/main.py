@@ -2,6 +2,6 @@
 import strings
 
 def main():
-    strings.string_access_a_character()
+    strings.loop_a_string_w_while()
 
 main()
