@@ -32,3 +32,14 @@ def local_variable_scope():
         num1 = 1 #accessible outside of the if statement but only in local_variable_scope function
     
     print(num1)
+
+def local_variable_scope_1():
+    num = 5
+    print(num)
+
+    while(num > 0):
+        num1 = 1
+        num -= 1
+
+    print(num1)
+
