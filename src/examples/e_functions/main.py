@@ -2,7 +2,9 @@
 import void_functions
 
 def main():
-    
-    void_functions.local_variable_scope_1()
+    num = 10
+    void_functions.local_variable_scope_and_main()
+
+    print(num)
 
 main()

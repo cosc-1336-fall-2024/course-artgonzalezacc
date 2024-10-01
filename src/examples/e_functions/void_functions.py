@@ -43,3 +43,8 @@ def local_variable_scope_1():
 
     print(num1)
 
+def local_variable_scope_and_main():
+    num = 5
+
+    print(num)
+
