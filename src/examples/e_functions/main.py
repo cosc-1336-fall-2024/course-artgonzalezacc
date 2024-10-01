@@ -1,10 +1,8 @@
 #main program
-import value_return_functions
+import void_functions
 
 def main():
     
-    for i in range(0, 10):
-        result = value_return_functions.get_random_value(1, 100)
-        print(result)
+    void_functions.local_variable_scope()
 
 main()

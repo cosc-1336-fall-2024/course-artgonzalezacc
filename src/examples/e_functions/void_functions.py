@@ -23,3 +23,12 @@ def local_and_params(num1):
     num1 = 10
     print("local_and_params1" ,num1)
     print(GLOBAL_INT)
+
+def local_variable_scope():
+    num = 5 #accessible in the local_variable_scope
+    print(num)
+    
+    if(True):
+        num1 = 1 #accessible outside of the if statement but only in local_variable_scope function
+    
+    print(num1)
