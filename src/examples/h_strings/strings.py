@@ -19,5 +19,11 @@ def loop_a_string_w_while():
     while(indx < len(lang)):
         print(lang[indx])
         indx += 1 # index = index + 1
+
+def loop_a_string_w_for_range():
+    lang = "Python"
+
+    for i in range(0, len(lang)):
+        print(lang[i])
     
     
