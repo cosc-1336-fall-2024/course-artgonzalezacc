@@ -25,5 +25,12 @@ def loop_a_string_w_for_range():
 
     for i in range(0, len(lang)):
         print(lang[i])
+
+def loop_a_string_w_for():
+    lang = "Python"
+
+    for ch in lang:
+        print(ch)
+
     
     
