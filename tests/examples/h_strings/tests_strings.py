@@ -13,3 +13,24 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(result, "Python is easy to learn")
 
+    def test_string_is_alphanum(self):
+        str = "Cpp"
+
+        self.assertEqual(True, str.isalnum())
+
+        str = "Cpp123"
+        self.assertEqual(True, str.isalnum())
+
+        str = "Cpp#"
+        self.assertEqual(False, str.isalnum())
+
+    def test_string_is_alpha(self):
+        str = "Cpp"
+
+        self.assertEqual(True, str.isalpha())
+
+        str = "Cpp123"
+
+        self.assertEqual(False, str.isalpha())
+
+
