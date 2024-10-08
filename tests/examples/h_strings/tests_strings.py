@@ -71,6 +71,19 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual('wwwww', str)
 
+    def test_split_string(self):
+        text = 'Four score and seven years ago'
+        list1 = text.split()
+
+        self.assertEqual(['Four', 'score', 'and', 'seven', 'years', 'ago'], list1)
+
+    def test_split_string_date(self):
+        date1 = '10/08/2024'
+        list1 = date1.split('/')
+        expected_list = ['10', '08', '2024']
+
+        self.assertEqual(expected_list, list1)
+
 
 
 
