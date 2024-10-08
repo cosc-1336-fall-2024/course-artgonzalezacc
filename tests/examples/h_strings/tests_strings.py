@@ -33,4 +33,18 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(False, str.isalpha())
 
+    def test_substring_in_string(self):
+        text = 'Four score and seven years ago'
+
+        self.assertEqual(True, 'seven' in text)
+        self.assertEqual(False, 'Seven' in text)
+
+    def test_substring_not_in_string(self):
+        text = 'Four score and seven years ago'
+
+        self.assertEqual(False, 'seven' not in text)
+        self.assertEqual(True, 'Seven' not in text)
+
+
+
 
