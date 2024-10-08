@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.h_strings.strings import test_config
+from src.examples.h_strings.strings import test_config, validate_password
 
 class Test_Config(unittest.TestCase):
 
@@ -83,6 +83,18 @@ class Test_Config(unittest.TestCase):
         expected_list = ['10', '08', '2024']
 
         self.assertEqual(expected_list, list1)
+    
+    def test_validate_password1(self):
+        password = '1234ABCd'
+
+        self.assertEqual(True, validate_password(password))
+
+    def test_validate_password2(self):
+        password = '1234Ab'
+
+        self.assertEqual(False, validate_password(password))
+        
+
 
 
 
