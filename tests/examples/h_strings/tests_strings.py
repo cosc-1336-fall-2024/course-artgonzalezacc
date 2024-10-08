@@ -45,6 +45,27 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(False, 'seven' not in text)
         self.assertEqual(True, 'Seven' not in text)
 
+    def test_find_substring(self):
+        text = 'Four score and seven years ago'
+
+        self.assertEqual(15, text.find('seven'))
+        self.assertEqual(-1, text.find('Seven'))
+
+    def test_replace_old_w_new(self):
+        text = 'Four score and seven years ago'
+        new_text = text.replace('seven', 'SEVEN')
+
+        self.assertEqual('Four score and SEVEN years ago', new_text)
+
+    def test_strip_string(self):
+        lang = "C++     "
+        new_text = lang.rstrip()
+        self.assertEqual('C++', new_text)
+
+        lang = "C++\n\n\n\n"
+        new_text = lang.rstrip('\n')
+        self.assertEqual('C++', new_text)
+
 
 
 
