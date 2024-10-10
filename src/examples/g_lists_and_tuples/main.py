@@ -2,6 +2,8 @@ import lists
 #main program
 
 def main():
-    lists.create_array()
+    #lists.access_array_elements()
+    #lists.loop_array_elements_while()
+    lists.loop_array_elements_for_range()
 
 main()
