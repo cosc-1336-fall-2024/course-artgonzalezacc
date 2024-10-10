@@ -69,3 +69,32 @@ def create_list():
 
     for item in list:
         print(item)
+
+def access_list_elements():
+    list = [1,'bb', 5.5, True]
+
+    print(list[0])    
+    print(list[1])
+
+def update_list_elements():
+    list = [1,'bb', 5.5, True]
+
+    print(list[0])    
+    list[0] = 'abc'
+
+    print(list[0])
+
+def loop_list_items_w_while():
+    list = [1,'bb', 5.5, True]
+    indx = 0
+
+    while(indx < len(list)):
+        print(list[indx])
+        indx += 1
+
+def loop_list_items_w_for_range():
+    list = [1,'bb', 5.5, True]
+
+    for indx in range(0, len(list)):
+        print(list[indx])
+
