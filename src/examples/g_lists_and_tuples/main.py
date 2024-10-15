@@ -2,11 +2,15 @@ import lists
 #main program
 
 def main():
-    #lists.create_list()
-    #lists.access_list_elements()
-    #lists.update_list_elements()
-    #lists.loop_list_items_w_while()
-    lists.loop_list_items_w_for_range()
-    
+    prod_nums = ['V475', 'F987', 'Q143', 'R688']
+
+    item = input("Enter item: ")
+
+    if(item in prod_nums):
+        prod_nums.remove(item)
+    else:
+        print(item, "not in list")
+
+    print(prod_nums)    
 
 main()
