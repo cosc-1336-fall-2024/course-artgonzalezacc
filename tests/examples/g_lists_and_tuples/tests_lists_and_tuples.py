@@ -61,3 +61,15 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(True, list1 == expected_list)
 
+    def test_list_in_key_word(self):
+        prod_nums = ['V475', 'F987', 'Q143', 'R688']
+
+        self.assertEqual(True, 'V475' in prod_nums)
+        self.assertEqual(False, 'v475' in prod_nums)
+
+    def test_list_not_in_key_word(self):
+        prod_nums = ['V475', 'F987', 'Q143', 'R688']
+
+        self.assertEqual(True, 'v475' not in prod_nums)
+        self.assertEqual(False, 'V475' not in prod_nums)
+
