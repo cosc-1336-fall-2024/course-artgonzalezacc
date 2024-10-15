@@ -11,3 +11,14 @@ class Test_Config(unittest.TestCase):
         total = get_total_of_array_elements()
 
         self.assertEqual(total, 15)
+
+    def test_list_copy_memory(self):
+        list1 = [5, 4, 10]
+        list2 = list1 #no real copy created. list1 and list2 point to the same list in memory
+
+        self.assertEqual(True, list1 == list2)
+        list1[0] = 20
+
+        #self.assertEqual(True, list1 != list2)
+
+        self.assertEqual(True, list1[0] == list2[0])
