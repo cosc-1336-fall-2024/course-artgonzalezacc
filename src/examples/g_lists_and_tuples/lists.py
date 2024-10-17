@@ -103,3 +103,8 @@ def use_list_as_parameter(list1, num):
     list1[0] = 100
     num = 25
 
+def list_as_return_values(list1):
+    list1[0] = 100
+
+    return list1
+

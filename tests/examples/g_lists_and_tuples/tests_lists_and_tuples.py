@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import get_total_of_array_elements, test_config, use_list_as_parameter
+from src.examples.g_lists_and_tuples.lists import get_total_of_array_elements, list_as_return_values, test_config, use_list_as_parameter
 
 class Test_Config(unittest.TestCase):
 
@@ -101,4 +101,14 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(True, num == 1)
         self.assertEqual(True, list1[0] == 100)
+
+    def test_list_as_return_value(self):
+        list1 = [5, 3, 10]
+
+        return_list = list_as_return_values(list1)
+
+        self.assertEqual(True, list1 == return_list)
+        self.assertEqual(True, list1[0] == 100)
+        self.assertEqual(True, return_list[0] == 100)
+        self.assertEqual(True, list1[0] == return_list[0])
 
