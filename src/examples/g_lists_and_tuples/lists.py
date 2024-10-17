@@ -98,3 +98,8 @@ def loop_list_items_w_for_range():
     for indx in range(0, len(list)):
         print(list[indx])
 
+def use_list_as_parameter(list1, num):
+
+    list1[0] = 100
+    num = 25
+

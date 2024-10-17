@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import get_total_of_array_elements, test_config
+from src.examples.g_lists_and_tuples.lists import get_total_of_array_elements, test_config, use_list_as_parameter
 
 class Test_Config(unittest.TestCase):
 
@@ -92,4 +92,13 @@ class Test_Config(unittest.TestCase):
         expected_list = ['V475', 'Q143', 'R688']
 
         self.assertEqual(True, prod_nums == expected_list)
+
+    def test_list_as_function_parameters(self):
+        num = 1
+        list1 = [5, 3, 10]
+
+        use_list_as_parameter(list1, num)
+
+        self.assertEqual(True, num == 1)
+        self.assertEqual(True, list1[0] == 100)
 
