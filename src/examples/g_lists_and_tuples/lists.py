@@ -108,3 +108,8 @@ def list_as_return_values(list1):
 
     return list1
 
+def list_as_return_value_no_param():
+    list1 = [5, 3, 10]
+
+    return list1, id(list1)
+
