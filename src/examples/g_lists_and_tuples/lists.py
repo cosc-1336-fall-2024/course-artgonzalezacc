@@ -113,3 +113,15 @@ def list_as_return_value_no_param():
 
     return list1, id(list1)
 
+def get_the_total_values_of_list_items_while():
+    total = 0
+    indx = 0
+    list1 = [2, 4, 6, 8, 10]
+
+    while(indx < len(list1)):
+        total += list1[indx] #same as total = total + list1[indx]
+
+        indx += 1
+
+    return total
+
