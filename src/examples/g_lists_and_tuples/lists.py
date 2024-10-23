@@ -142,3 +142,24 @@ def get_the_total_values_of_list_items_for():
         total += item
 
     return total
+
+def get_multiplication_table(rows, cols):
+    list = []
+
+    for i in range(0, rows):#loop all rows
+        row_list = []
+
+        for j in range(0, cols): #loop all cols
+            row_list.append((i + 1) * (j + 1))
+
+        list.append(row_list)    
+
+    return list
+
+def display_multiplication_table(list):
+
+    for row_list in list:
+        for item in row_list:
+            print(str(item).rjust(3, " "), end = " ")
+
+        print(" ")
