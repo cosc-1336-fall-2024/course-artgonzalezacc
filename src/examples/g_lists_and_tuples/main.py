@@ -2,7 +2,7 @@ import tuples
 #main program
 
 def main():
-    tuples.create_a_tuple()
+    tuples.store_different_data_in_tuple()
 
     
 
