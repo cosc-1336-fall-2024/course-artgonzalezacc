@@ -49,4 +49,11 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(3, key_value_count)
 
+    def test_different_data_type_values(self):
+        test_scores = {'123':[88,92,100], '456':95, '789':'dropped'}
+        expected_list = [88, 92, 100]
+        list1 = test_scores['123']
+
+        self.assertEqual(list1, expected_list)
+
 
