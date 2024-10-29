@@ -38,3 +38,16 @@ def delete_key_value_pair():
         print("Key ", key, " does not exist.")
 
     print(phonebook)
+
+def update_value():
+    phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+
+    key = input("Enter the key: ")
+    value = input("Enter the new value: ")
+
+    if key in phonebook:
+        phonebook[key] = value
+    else:
+        print("Key ", key, " does not exist.")
+    
+    print(phonebook)
