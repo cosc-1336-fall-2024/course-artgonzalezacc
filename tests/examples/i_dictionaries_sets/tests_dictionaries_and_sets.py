@@ -43,3 +43,10 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(phonebook, expected_phonebook)
 
+    def test_get_number_of_elements_dictionary(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        key_value_count = len(phonebook)
+
+        self.assertEqual(3, key_value_count)
+
+
