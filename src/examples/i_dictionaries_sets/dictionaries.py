@@ -8,4 +8,21 @@ def use_a_dictionary():
     print(phonebook['555-2222'])
     print(phonebook['555-1111'])     
     print(phonebook['555-3333'])
-    #print(phonebook['555-1112']) generates a KeyError--key doesn't exist
+    
+    if('555-1112' in phonebook):
+        print(phonebook['555-1112'])
+    else:
+        print('Key does not exist') 
+
+def add_key_value_pair():
+    phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+    
+    key = input("Enter the key: ")
+    value = input("Enter the value: ")
+
+    if key not in phonebook:
+        phonebook[key] = value
+    else:
+        print(key, " already exists.")
+
+    print(phonebook)
