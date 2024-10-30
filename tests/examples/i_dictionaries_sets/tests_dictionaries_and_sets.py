@@ -56,4 +56,16 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(list1, expected_list)
 
+    def test_create_empty_dictionary(self):
+        expected_phonebook = {'555-1111':'Cris'}
+        phonebook = {} #empty dictionary
+        self.assertEqual(phonebook, {})
+        
+        key = '555-1111'
+        value = 'Cris'
+        
+        phonebook[key] = value
+
+        self.assertEqual(phonebook, expected_phonebook)
+
 
