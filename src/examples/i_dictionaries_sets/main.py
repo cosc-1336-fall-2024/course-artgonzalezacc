@@ -2,6 +2,6 @@
 import dictionaries
 
 def main():
-    dictionaries.update_value()
+    dictionaries.loop_dictionary_w_for()
 
 main()

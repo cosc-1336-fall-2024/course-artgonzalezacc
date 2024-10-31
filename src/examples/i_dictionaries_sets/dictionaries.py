@@ -51,3 +51,9 @@ def update_value():
         print("Key ", key, " does not exist.")
     
     print(phonebook)
+
+def loop_dictionary_w_for():
+    phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+
+    for key in phonebook:
+        print(phonebook[key])
