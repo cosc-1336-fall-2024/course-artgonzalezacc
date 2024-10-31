@@ -57,3 +57,16 @@ def loop_dictionary_w_for():
 
     for key in phonebook:
         print(phonebook[key])
+
+def loop_dictionary_w_while():
+    phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+
+    keys_list = list(phonebook.keys())
+    size_keys_list = len(keys_list)
+    indx = 0
+
+    while indx < size_keys_list:
+        print(phonebook[keys_list[indx]])
+        indx += 1
+
+    
