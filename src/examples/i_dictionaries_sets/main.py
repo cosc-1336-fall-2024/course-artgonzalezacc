@@ -2,6 +2,6 @@
 import dictionaries
 
 def main():
-    dictionaries.loop_dictionary_w_while()
+    dictionaries.loop_dictionary_w_for_range()
 
 main()
