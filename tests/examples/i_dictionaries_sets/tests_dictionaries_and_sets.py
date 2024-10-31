@@ -101,4 +101,26 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(name, 'Katie')
         self.assertEqual(phonebook, expected_phonebook)
 
+    def test_merge_dictionaries(self):
+        phonebook1 = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        phonebook2 = {'555-4444':'Malak', '555-2222':'Irene', '555-6666':'Katherine'}
+
+        phonebook3 = phonebook1 | phonebook2
+        expected_phonebook = {'555-1111':'Chris', '555-2222':'Irene', '555-3333':'Joanne', \
+                              '555-4444':'Malak', '555-6666':'Katherine'}
+        
+        self.assertEqual(phonebook3, expected_phonebook)
+
+    def test_create_dictionary_squared_keys_as_values(self):
+        numbers = [1, 2, 3, 4]
+        squares = {}
+        expected_squares = {1:1, 2:4, 3:9, 4:16}
+
+        for number in numbers:
+            squares[number] = number ** 2
+
+        self.assertEqual(squares, expected_squares)
+
+
+
 
