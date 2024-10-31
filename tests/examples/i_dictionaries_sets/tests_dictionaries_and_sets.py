@@ -68,4 +68,37 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(phonebook, expected_phonebook)
 
+    def test_clear_dictionary(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        phonebook.clear()
+
+        self.assertEqual(phonebook, {})
+
+    def test_get_key_value_pair_dictionary_key_exists(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        name = phonebook.get('555-1111')
+
+        self.assertEqual(name, 'Chris')
+
+    def test_get_key_value_pair_dictionary_key_not_exists(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        name = phonebook.get('555-3334', 'Key does not exist')
+
+        self.assertEqual(name, 'Key does not exist')
+
+    def test_get_dictionary_items(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        items = list(phonebook.items())
+
+        self.assertEqual(items[0], ('555-1111', 'Chris'))
+        self.assertEqual(items[2], ('555-3333', 'Joanne'))
+
+    def test_pop_value_dictionary(self):
+        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
+        expected_phonebook = {'555-1111':'Chris', '555-3333':'Joanne'}
+        name = phonebook.pop('555-2222')
+
+        self.assertEqual(name, 'Katie')
+        self.assertEqual(phonebook, expected_phonebook)
+
 
