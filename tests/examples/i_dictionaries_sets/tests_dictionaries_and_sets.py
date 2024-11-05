@@ -7,119 +7,59 @@ class Test_Config(unittest.TestCase):
     def test_configuration(self):
         self.assertEqual(True, test_config())
 
-    def test_add_key_value_pair_dictionary(self):
-        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        expected_phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne', \
-                              '555-4444':'Python'}
+    def test_union_of_a_set(self):
+        set1 = set([1,2,3,4])
+        set2 = set([3,4,5,6])
+        expected_set = set([1,2,3,4,5,6])
+        union_set = set1.union(set2) # set1 | set2
+
+        self.assertEqual(expected_set, union_set)
+
+    def test_intersection_of_a_set(self):
+        set1 = set() #empty set
+        set1.add(1)
+        set1.add(2)
+        set1.add(3)
+        set1.add(4)
+        set2 = set([3,4,5,6])
+        expected_set = set([3,4])
+        intersection_set = set1.intersection(set2) #set1 & set2
+
+        self.assertEqual(expected_set, intersection_set)
+
+    def test_difference_of_sets(self):
+        set1 = set([1,2,3,4])
+        set2 = set([3,4,5,6])
+        expected_set = set([1,2])
+
+        difference_set = set1.difference(set2) #set1 - set2
+
+        self.assertEqual(expected_set, difference_set)
+
+    def test_symmetric_difference_sets(self):
+        set1 = set([1,2,3,4])
+        set2 = set([3,4,5,6])
+        expected_set = set([1,2,5,6])
+
+        symm_diff_set = set1.symmetric_difference(set2) #set1 ^ set2
+
+        self.assertEqual(expected_set, symm_diff_set)
+
+    def test_is_subset(self):
+        set1 = set([1,2,3,4])
+        set2 = set([2,3])
+
+        self.assertEqual(True, set2.issubset(set1))
+
+    def test_is_superset(self):
+        set1 = set([1,2,3,4])
+        set2 = set([2,3])
+
+        self.assertEqual(True, set1.issuperset(set2))
+
+
+
     
-        key = '555-4444'
-        value = 'Python'
-
-        if key not in phonebook:
-            phonebook[key] = value
-
-        self.assertEqual(phonebook, expected_phonebook)
-
-    def test_delete_key_value_pair_dictionary(self):
-        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        expected_phonebook = {'555-1111':'Chris', '555-3333':'Joanne'}
-
-        key = '555-2222'
-        
-        if key in phonebook:
-            del phonebook[key]
-
-        self.assertEqual(phonebook, expected_phonebook)
-
-    def test_update_value_dictionary(self):
-        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        expected_phonebook = {'555-1111':'Cris', '555-2222':'Katie', '555-3333':'Joanne'}
-
-        key = '555-1111'
-        value = 'Cris'
-
-        if key in phonebook:
-            phonebook[key] = value
-
-        self.assertEqual(phonebook, expected_phonebook)
-
-    def test_get_number_of_elements_dictionary(self):
-        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        key_value_count = len(phonebook)
-
-        self.assertEqual(3, key_value_count)
-
-    def test_different_data_type_values(self):
-        test_scores = {'123':[88,92,100], '456':95, '789':'dropped'}
-        expected_list = [88, 92, 100]
-        list1 = test_scores['123']
-
-        self.assertEqual(list1, expected_list)
-
-    def test_create_empty_dictionary(self):
-        expected_phonebook = {'555-1111':'Cris'}
-        phonebook = {} #empty dictionary
-        self.assertEqual(phonebook, {})
-        
-        key = '555-1111'
-        value = 'Cris'
-        
-        phonebook[key] = value
-
-        self.assertEqual(phonebook, expected_phonebook)
-
-    def test_clear_dictionary(self):
-        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        phonebook.clear()
-
-        self.assertEqual(phonebook, {})
-
-    def test_get_key_value_pair_dictionary_key_exists(self):
-        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        name = phonebook.get('555-1111')
-
-        self.assertEqual(name, 'Chris')
-
-    def test_get_key_value_pair_dictionary_key_not_exists(self):
-        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        name = phonebook.get('555-3334', 'Key does not exist')
-
-        self.assertEqual(name, 'Key does not exist')
-
-    def test_get_dictionary_items(self):
-        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        items = list(phonebook.items())
-
-        self.assertEqual(items[0], ('555-1111', 'Chris'))
-        self.assertEqual(items[2], ('555-3333', 'Joanne'))
-
-    def test_pop_value_dictionary(self):
-        phonebook = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        expected_phonebook = {'555-1111':'Chris', '555-3333':'Joanne'}
-        name = phonebook.pop('555-2222')
-
-        self.assertEqual(name, 'Katie')
-        self.assertEqual(phonebook, expected_phonebook)
-
-    def test_merge_dictionaries(self):
-        phonebook1 = {'555-1111':'Chris', '555-2222':'Katie', '555-3333':'Joanne'}
-        phonebook2 = {'555-4444':'Malak', '555-2222':'Irene', '555-6666':'Katherine'}
-
-        phonebook3 = phonebook1 | phonebook2
-        expected_phonebook = {'555-1111':'Chris', '555-2222':'Irene', '555-3333':'Joanne', \
-                              '555-4444':'Malak', '555-6666':'Katherine'}
-        
-        self.assertEqual(phonebook3, expected_phonebook)
-
-    def test_create_dictionary_squared_keys_as_values(self):
-        numbers = [1, 2, 3, 4]
-        squares = {}
-        expected_squares = {1:1, 2:4, 3:9, 4:16}
-
-        for number in numbers:
-            squares[number] = number ** 2
-
-        self.assertEqual(squares, expected_squares)
 
 
 
