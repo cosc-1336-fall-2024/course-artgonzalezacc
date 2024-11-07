@@ -30,5 +30,13 @@ def read_from_file_one_line_at_a_time(file_name):
     print(line2)
     print(line3)
 
+def read_from_file_w_a_loop(file_name):
+    file = open(file_name, 'r')
+
+    for line in file:
+        print(line.rstrip('\n'))
+
+    file.close()
+
 
 
