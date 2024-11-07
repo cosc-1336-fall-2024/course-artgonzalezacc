@@ -132,6 +132,37 @@ def read_list_of_lists_file(file_name):
     for employee in list_langs:
         print(employee[0], employee[1], employee[2])
 
+def write_dictionary_records(file_name):
+    file = open(file_name, 'w')
+
+    prog_langs = {'1':['C++', 'Prog'], '2':['Python', 'Prog'], '3':['java', 'Prog']}
+
+    for key in prog_langs:
+        record = prog_langs[key]
+        file.write(key + '\t')
+        file.write(record[0] + '\t')
+        file.write(record[1] + '\n')
+
+    file.close()
+
+def read_dictionary_records(file_name):
+    file = open(file_name, 'r')
+
+    prog_langs = {}
+
+    for line in file:
+        record = line.split('\t')
+        key = record[0]
+        name = record[1]
+        dept = record[2].rstrip('\n')
+
+        prog_langs[key] = [name, dept]
+
+    file.close()
+
+    print(prog_langs)
+
+
 
 
 
