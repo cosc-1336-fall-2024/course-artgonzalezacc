@@ -45,4 +45,17 @@ def multiply_two_number_validate():
 
     print(result)
 
+def open_file_for_reading(file_name):
+    
+    try:
+        file = open(file_name, 'r')
+
+        contents = file.read()
+
+        print(contents)
+
+        file.close
+    except IOError:
+        print("Cannot read the file, not found ...", file_name)
+
     

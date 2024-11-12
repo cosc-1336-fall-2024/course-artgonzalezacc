@@ -2,7 +2,7 @@
 import exceptions
 
 def main():
-    exceptions.multiply_two_number_validate()
+    exceptions.open_file_for_reading('names.text')
     
 
 main()
