@@ -58,4 +58,23 @@ def open_file_for_reading(file_name):
     except IOError:
         print("Cannot read the file, not found ...", file_name)
 
+def open_sales_file_for_reading(file_name):
+    
+    try:
+        file = open(file_name, 'r')
+
+        total = 0
+
+        for line in file:
+            amount = int(line) 
+            total += amount
+        
+        print(total)
+
+        file.close()
+    except IOError:
+        print('Error reading file, not found')
+    except ValueError:
+        print('File contains invalid data')
+
     
