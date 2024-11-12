@@ -1,9 +1,12 @@
 #main program
-import files
+import exceptions
 
 def main():
-    file_name = 'alaska-hd-wallpaper.jpg'
-    files.read_image_jpg_file(file_name)
+    result = exceptions.divide_two_numbers(6, 2)
+    print(result)
+    
+    result = exceptions.divide_two_numbers(3, 0)
+    print(result)
     
 
 main()
