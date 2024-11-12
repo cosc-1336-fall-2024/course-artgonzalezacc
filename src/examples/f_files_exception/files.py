@@ -179,6 +179,13 @@ def read_dictionary_from_file(file_name):
 
     print(phone_book)
 
+def read_image_jpg_file(file_name):
+    file = open(file_name, 'rb')
+
+    contents = file.read()
+
+    print(contents)
+
 
 
 
