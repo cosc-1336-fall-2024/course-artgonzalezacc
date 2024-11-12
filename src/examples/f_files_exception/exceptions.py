@@ -59,6 +59,8 @@ def open_file_for_reading(file_name):
         print("Cannot read the file, not found ...", file_name)
 
 def open_sales_file_for_reading(file_name):
+
+    log_file = open('system_log.dat', 'a')
     
     try:
         file = open(file_name, 'r')
@@ -72,9 +74,13 @@ def open_sales_file_for_reading(file_name):
         print(total)
 
         file.close()
-    except IOError:
+    except IOError as err:
         print('Error reading file, not found')
-    except ValueError:
+        log_file.write(str(err) + '\n')
+    except ValueError as err:
         print('File contains invalid data')
+        log_file.write(str(err) + '\n')
+
+    log_file.close()
 
     
