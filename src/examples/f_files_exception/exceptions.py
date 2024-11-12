@@ -1,3 +1,9 @@
+import logging
+
+logging.basicConfig(filename='myapp.log', level=logging.DEBUG, 
+                    format='%(asctime)s %(levelname)s %(name)s %(message)s')
+logger=logging.getLogger(__name__)
+
 def test_config():
     return True
 
@@ -60,8 +66,6 @@ def open_file_for_reading(file_name):
 
 def open_sales_file_for_reading(file_name):
 
-    log_file = open('system_log.dat', 'a')
-    
     try:
         file = open(file_name, 'r')
 
@@ -76,11 +80,10 @@ def open_sales_file_for_reading(file_name):
         file.close()
     except IOError as err:
         print('Error reading file, not found')
-        log_file.write(str(err) + '\n')
+        logger.error(err)
     except ValueError as err:
         print('File contains invalid data')
-        log_file.write(str(err) + '\n')
+        logger.error(err)
 
-    log_file.close()
 
     
