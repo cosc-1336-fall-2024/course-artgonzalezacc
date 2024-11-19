@@ -1,6 +1,7 @@
 class BankAccount:
 
     __balance = 0 #class variable-attributes-data PRIVATE
+    __cust_id = 123456
 
     #constructor --- function
     def __init__(self, balance):
