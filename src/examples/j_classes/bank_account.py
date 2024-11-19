@@ -8,4 +8,8 @@ class BankAccount:
 
     def get_balance(self):
         return self.__balance
+    
+    def deposit(self, amt):
+        if(amt > 0):
+            self.__balance += amt
 
