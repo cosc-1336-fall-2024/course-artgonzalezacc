@@ -5,6 +5,7 @@ from src.examples.j_classes.bank_account import BankAccount
 from src.examples.j_classes.bank_account_db import BankAccountDB
 from src.examples.j_classes.die import Die
 from src.examples.j_classes.roll import Roll
+from src.examples.j_classes.player import Player
 
 class Test_Config(unittest.TestCase):
 
@@ -22,6 +23,17 @@ class Test_Config(unittest.TestCase):
 
         for i in range(0, 24):
             roll = Roll(die1, die2)
+
+            self.assertEqual(True, roll.roll_value() >= 2)
+            self.assertEqual(True, roll.roll_value() <= 12)
+
+    def test_player_roll(self):
+        die1 = Die()
+        die2 = Die()
+        player = Player()
+
+        for i in range(0, 24):
+            roll = player.roll_dice(die1, die2)
 
             self.assertEqual(True, roll.roll_value() >= 2)
             self.assertEqual(True, roll.roll_value() <= 12)
